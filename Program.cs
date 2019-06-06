@@ -7,14 +7,15 @@ class Program
   {
     string workingfolder = "/home/adrien/";
     StreamReader sr = new StreamReader(workingfolder + "input.txt");
-
+    StreamWriter sw = new StreamWriter(workingfolder + "output.txt");
     string line = string.Empty;
 
     while ((line = sr.ReadLine()) != null)
     {
-      string s = line;
+      sw.WriteLine(line);
     }
-
+    sr.Close();
+    sw.Close();
     Console.WriteLine("Hello World!");
   }
 }
