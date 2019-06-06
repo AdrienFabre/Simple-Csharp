@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/adrien/Projects/dotnet/csharp/csharp.csproj": {}
+  },
+  "projects": {
+    "/home/adrien/Projects/dotnet/csharp/csharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/adrien/Projects/dotnet/csharp/csharp.csproj",
+        "projectName": "csharp",
+        "projectPath": "/home/adrien/Projects/dotnet/csharp/csharp.csproj",
+        "packagesPath": "/home/adrien/.nuget/packages/",
+        "outputPath": "/home/adrien/Projects/dotnet/csharp/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/adrien/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
