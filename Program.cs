@@ -6,12 +6,21 @@ class Program
 {
   static void Main(string[] args)
   {
+    List<Customer> myCustomers = new List<Customer>();
+    myCustomers = GetCustomersFromFile();
+
+    Console.WriteLine("Hello World!");
+
+  }
+
+  static public List<Customer> GetCustomersFromFile()
+  {
+    List<Customer> myCustomers = new List<Customer>();
+
     string workingfolder = "/home/adrien/";
     StreamReader sr = new StreamReader(workingfolder + "input.txt");
     StreamWriter sw = new StreamWriter(workingfolder + "output.txt");
     string line = string.Empty;
-
-    List<Customer> myCustomers = new List<Customer>();
 
     while ((line = sr.ReadLine()) != null)
     {
@@ -24,9 +33,11 @@ class Program
 
       myCustomers.Add(myCust);
     }
+
     sr.Close();
     sw.Close();
-    Console.WriteLine("Hello World!");
+    return myCustomers;
+
   }
 }
 
