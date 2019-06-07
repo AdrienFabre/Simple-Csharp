@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-
+using System.Linq;
 class Program
 {
   static void Main(string[] args)
@@ -9,8 +9,29 @@ class Program
     List<Customer> myCustomers = new List<Customer>();
     myCustomers = GetCustomersFromFile();
 
-    Console.WriteLine("Hello World!");
+    List<Customer> women = new List<Customer>();
+    women = myCustomers.Where(x => x.Gender == "F").ToList();
 
+    List<Customer> men = new List<Customer>();
+    men = myCustomers.Where(x => x.Gender == "M").ToList();
+
+    StreamWriter sw = new StreamWriter("/home/adrien/men.txt");
+
+    foreach (Customer mydude in men)
+    {
+      sw.WriteLine(mydude.ID + " " + mydude.Name + " " + mydude.Gender);
+    }
+    sw.Close();
+
+    sw = new StreamWriter("/home/adrien/women.txt");
+
+    foreach (Customer mylady in women)
+    {
+      sw.WriteLine(mylady.ID + " " + mylady.Name + " " + mylady.Gender);
+    }
+    sw.Close();
+
+    Console.WriteLine("Hello World!");
   }
 
   static public List<Customer> GetCustomersFromFile()
